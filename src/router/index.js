@@ -8,8 +8,15 @@ const routes = [
 	},
 	{
 		path: '/memories',
-		name: 'Memories',
 		component: MemoriesPage,
+	},
+	{
+		path: '/memories/:id',
+		component: () => import('../views/MemoryDetails.vue'),
+	},
+	{
+		path: '/memories/add',
+		component: () => import('../views/AddMemoryPage.vue'),
 	},
 ];
 

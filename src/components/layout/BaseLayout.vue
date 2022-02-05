@@ -1,0 +1,36 @@
+<template>
+	<!-- Se recomienda envolver todo la pagina en etiqueta IonPage para garantizar buenas animacion y transiciones. -->
+	<ion-page>
+		<ion-header>
+			<ion-toolbar>
+				<ion-buttons slot="start">
+					<ion-back-button :default-href="pageDefaultBackLink"></ion-back-button>
+				</ion-buttons>
+				<ion-title> {{ pageTitle }} </ion-title>
+				<ion-buttons slot="end">
+					<slot name="actions"></slot>
+				</ion-buttons>
+			</ion-toolbar>
+		</ion-header>
+
+		<ion-content>
+			<slot />
+		</ion-content>
+	</ion-page>
+</template>
+
+<script>
+//?Estos componentes de ionic son esenciales para todas las paginas que deseamos que el router cargue.
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonBackButton, IonButtons } from '@ionic/vue';
+
+export default {
+	props: { pageTitle: String, pageDefaultBackLink: String },
+	components: { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonBackButton, IonButtons },
+};
+</script>
+
+<style>
+ion-back-button {
+	--color: #fff;
+}
+</style>
