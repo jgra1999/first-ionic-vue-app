@@ -1,10 +1,10 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'first-ionic-vue-app',
-  webDir: 'dist',
-  bundledWebRuntime: false
+	appId: 'app.netlify.ionic',
+	appName: 'ionic memories',
+	webDir: 'dist',
+	bundledWebRuntime: false,
 };
 
 export default config;
